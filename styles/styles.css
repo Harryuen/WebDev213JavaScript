@@ -1,0 +1,390 @@
+/* ************ your name: Ki Fung Yuen
+
+INSTRUCTIONS:
+Comments starting with TO-DO have been included in this file to describe the needed styling: please translate these to the appropriate CSS declarations. 
+
+Comments starting with TO-DO may be left in for reference or removed entirely: all other comments should be left as-is for ease of review.
+
+You are discouraged from changing any provided CSS.
+
+***** colour palette: *****
+- mustard yellow (used for header, footer, and buttons): #E5AF42
+- cornflower blue (used for hover states): #4278e5
+
+*/
+
+
+/************* site defaults *************/
+body {
+    width: 950px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+/* TO DO: all elements with the .flex class applied are to be made into flex-box containers. */
+
+
+ 
+
+/************* site-wide text styling *************/
+
+/* TO DO:
+    - first-level headings are size 48px, centered vertically and horizontally in the available space.
+    - 2nd-level headings have a font size of 36px, and 12px of space below.
+    - any element with the .large-text class has a font size of 24px.
+    - any element with the .fake-button class will have a background colour of mustard yellow (see colour palette above), be center aligned, with a line-height of 3 and a solid black border that is 1px wide.
+    - all anchors will have the underline removed and be black in colour. all anchors in the main and footer sections will be underlined in their hover-state.
+    - the hover-state of .fake-button and .blue-hover elements will:
+        - add an underline, 
+        - set the background-colour to cornflower blue (see colour palette above),
+        - change the text colour to white, and 
+        - change the cursor to pointer.
+*/
+
+/* Resetting default margin and padding */
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 25px;
+}
+
+/* First-level headings */
+h1 {
+    font-size: 48px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Second-level headings */
+h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+/* Elements with .large-text class */
+.large-text {
+    font-size: 24px;
+}
+
+/* Elements with .fake-button class */
+.fake-button {
+    display: inline-block;
+    background-color: #DAA520;
+    color: black;
+    text-align: center;
+    line-height: 3;
+    border: 1px solid black;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+/* Anchors - Remove underlines and set black color */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Anchors in main and footer sections - Add underline on hover */
+main a:hover,
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Hover state for .fake-button and .blue-hover elements */
+.fake-button:hover,
+.flex .fake-button:hover,
+.blue-hover:hover {
+    text-decoration: underline;
+    background-color: #6495ED;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+/************* header/footer styling *************/
+
+/* TO DO:
+    - the header and footer will be the same mustard-yellow as the buttons.
+    - the header is 150px tall.
+    - the header image is 100px wide and tall with 25px of space above, below, and on its left, and the top-level heading is centered in the remaining width.
+    - there will be 25px of space between the header and main, and 50px of space between main and footer.
+    - the footer will be 60px tall, have a font-weight of 200, and the text within will be centered vertically and horizontally.
+*/
+
+/* Header */
+header {
+    background-color: #DAA520;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    position: relative; /* Add relative positioning */
+}
+
+/* Header image */
+header img {
+    width: 100px;
+    height: 100px;
+    position: absolute; /* Add absolute positioning */
+    left: 25px; /* Adjust the left position as needed */
+    top: 25px; /* Adjust the top position as needed */
+}
+
+/* Top-level heading in header */
+/* Top-level heading in header */
+header h1 {
+    margin: 0;
+    text-align: center;
+    flex: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    white-space: nowrap;
+}
+
+/* Space between header and main */
+main {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+/* Space between main and footer */
+footer {
+    margin-top: 50px;
+    background-color: #DAA520;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 200;
+    display:grid
+}
+
+
+
+
+/************* index page *************/
+
+/* TO-DO: 
+    - this is a 2-column layout: text on the left, and an image on the right. The image will be 300px wide, with 25px between it and the text column, which takes up the remaining space. The image will also have 50px of space below.
+    - the h2 on this page will have a line-height equal to the font size.
+    - each paragraph on this page will have 12px of space beneath it.
+    - each fake-button on this page will be 250px wide with 150px of space between them.
+    - the pair of fake-buttons will be centered on the page. HINT: can calculate the required margin to make them appear to be centered.
+*/
+
+/* 2-column layout */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+/* Text column on the left */
+.about-us {
+    flex: 1;
+}
+
+/* Image on the right */
+img {
+    width: 300px;
+    height: auto; 
+    margin-bottom: 50px;
+}
+
+/* Adjust h2 line-height */
+h2 {
+    line-height: 36px; /* Font size of 36px */
+}
+
+/* Space below paragraphs */
+p {
+    margin-bottom: 12px;
+}
+
+/* Fake-buttons */
+.fake-button {
+    width: 250px;
+}
+
+/* Centering the pair of fake-buttons */
+.flex > .fake-button:first-child {
+    margin-right: 150px;
+}
+
+/* Footer space for the pair of fake-buttons */
+footer {
+    margin-bottom: 200px; /* Adjust as needed */
+}
+
+
+
+
+
+/************* bookings page *************/
+
+/* TO-DO:
+    - the contents of the booking-page will be 600px wide, and all content centered within the available space.
+    - text will have a size of 18px.
+    - there will be 12px of space below the day-selectors, and 20px of space between each list item. List items are 60px wide.
+    - List items & the small-button elements will have a solid black border that is 1px wide. Small-buttons will also have 5px of space between the border and the content.
+    - items tagged with .top-margin will have 24 px of space above, and 12px of space below.
+    - the "clear days" button will be 200px wide.
+    - any element tagged with the .clicked class will turn mustard yellow. **This will be very important for your JavaScript.**
+    - all items within the page will be centered within their available space.
+
+*/
+
+/* Booking Page Styles */
+.booking-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.booking-page p,
+.booking-page h2 {
+    font-size: 18px;
+}
+
+.day-selector {
+    margin-bottom: 12px;
+}
+
+.day-selector li {
+    width: 60px;
+    display: inline-block;
+    margin: 0 20px;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.small-button {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+
+.top-margin {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.fake-button.clicked,
+.small-button.clicked {
+    background-color: #FFD700;
+}
+
+.day-selector li.clicked {
+    background-color: #FFD700;
+  }
+
+#clear-button {
+    width: 200px;
+}
+
+/* Center all items within their space */
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+
+/************* contact page *************/
+/* TO DO:
+    - the main section of the .contact page will be 420px tall, and centered.
+    - the contents will be 2 columns: the labels column is 150px wide and right-aligned, and the input column is 300px wide. There will be 24px of space between the columns, and the pair of columns will be centered on the page.
+    - the textarea element will be 150px tall.
+    - all form input, textarea, and and button elements will have the same font as the rest of the page, a line-height of 24px, a font-size of 16px, and the same border as other buttons on the site. There will be 24px of space below each of these elements.
+    - the edges of the button will line up exactly with the text-area element. HINT: time for some math!
+*/
+
+/* Contact Page Styles */
+#contact-page {
+    display: flex;
+    flex-direction: column; /* Align elements in a column */
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Align form elements in a column */
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 24px; /* Add space below the h2 element */
+}
+
+.flex {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+label {
+    width: 150px;
+    text-align: right;
+    margin-right: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 300px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid #FFD700;
+    padding: 6px;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    border: 2px solid #FFD700;
+    padding: 6px 12px;
+    background-color: transparent;
+    color: #FFD700;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFD700;
+}
+
+/* Reset margin for the last element inside form */
+form div:last-child {
+    margin-bottom: 0;
+}
+
